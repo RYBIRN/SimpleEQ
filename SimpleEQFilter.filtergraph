@@ -16,7 +16,7 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <FILTER uid="2" x="0.5375" y="0.1387959866220736" useARA="0">
+  <FILTER uid="2" x="0.64625" y="0.1404682274247492" useARA="0">
     <PLUGIN name="MIDI Input" descriptiveName="" format="Internal" category="I/O devices"
             manufacturer="JUCE" version="1.0" file="" uniqueId="a9e4f9eb"
             isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="0"
@@ -61,11 +61,11 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <FILTER uid="5" x="0.5575" y="0.5362903225806451" useARA="0" uiLastX_Normal="307"
+  <FILTER uid="5" x="0.43875" y="0.520066889632107" useARA="0" uiLastX_Normal="307"
           uiLastY_Normal="169" uiopen_Normal="0">
     <PLUGIN name="SimpleEQ" format="VST3" category="Fx" manufacturer="yourcompany"
             version="1.0.0" file="D:\SoftwareDevelopment\SimpleEQ\SimpleEQ\Builds\VisualStudio2022\x64\Debug\VST3\SimpleEQ.vst3\Contents\x86_64-win\SimpleEQ.vst3"
-            uniqueId="fe6de019" isInstrument="0" fileTime="19064049afa" infoUpdateTime="190646cfcd4"
+            uniqueId="fe6de019" isInstrument="0" fileTime="190739548b4" infoUpdateTime="19073d72e1f"
             numInputs="2" numOutputs="2" isShell="0" hasARAExtension="0"
             uid="e9582ec3"/>
     <STATE>191.VMjLgXK....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9XCLt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9..</STATE>
@@ -78,23 +78,8 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <FILTER uid="10" x="0.5425" y="0.274247491638796" useARA="0" uiLastX_Normal="692"
-          uiLastY_Normal="311" uiopen_Normal="0">
-    <PLUGIN name="SamplerPlugin" format="Internal" category="Synth" manufacturer="JUCE"
-            version="1.0.0" file="SamplerPlugin" uniqueId="2a34a53b" isInstrument="1"
-            fileTime="0" infoUpdateTime="0" numInputs="0" numOutputs="2"
-            isShell="0" hasARAExtension="0" uid="2a34a53b"/>
-    <STATE>0.</STATE>
-    <LAYOUT>
-      <INPUTS/>
-      <OUTPUTS>
-        <BUS index="0" layout="L R"/>
-      </OUTPUTS>
-    </LAYOUT>
-  </FILTER>
-  <CONNECTION srcFilter="2" srcChannel="4096" dstFilter="10" dstChannel="4096"/>
+  <CONNECTION srcFilter="1" srcChannel="0" dstFilter="5" dstChannel="0"/>
+  <CONNECTION srcFilter="1" srcChannel="1" dstFilter="5" dstChannel="1"/>
   <CONNECTION srcFilter="5" srcChannel="0" dstFilter="3" dstChannel="0"/>
   <CONNECTION srcFilter="5" srcChannel="1" dstFilter="3" dstChannel="1"/>
-  <CONNECTION srcFilter="10" srcChannel="0" dstFilter="5" dstChannel="0"/>
-  <CONNECTION srcFilter="10" srcChannel="1" dstFilter="5" dstChannel="1"/>
 </FILTERGRAPH>

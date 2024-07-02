@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <FILTERGRAPH>
-  <FILTER uid="1" x="0.145" y="0.2096774193548387" useARA="0">
+  <FILTER uid="1" x="0.43625" y="0.3812709030100335" useARA="0">
     <PLUGIN name="Audio Input" descriptiveName="" format="Internal" category="I/O devices"
             manufacturer="JUCE" version="1.0" file="" uniqueId="246006c0"
             isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="0"
@@ -31,7 +31,7 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <FILTER uid="3" x="0.5" y="0.9" useARA="0">
+  <FILTER uid="3" x="0.44" y="0.6806020066889632" useARA="0">
     <PLUGIN name="Audio Output" descriptiveName="" format="Internal" category="I/O devices"
             manufacturer="JUCE" version="1.0" file="" uniqueId="724248cb"
             isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="2"
@@ -62,10 +62,10 @@
     </LAYOUT>
   </FILTER>
   <FILTER uid="5" x="0.43875" y="0.520066889632107" useARA="0" uiLastX_Normal="307"
-          uiLastY_Normal="169" uiopen_Normal="0">
+          uiLastY_Normal="169" uiopen_Normal="1">
     <PLUGIN name="SimpleEQ" format="VST3" category="Fx" manufacturer="yourcompany"
             version="1.0.0" file="D:\SoftwareDevelopment\SimpleEQ\SimpleEQ\Builds\VisualStudio2022\x64\Debug\VST3\SimpleEQ.vst3\Contents\x86_64-win\SimpleEQ.vst3"
-            uniqueId="fe6de019" isInstrument="0" fileTime="190739548b4" infoUpdateTime="19073d72e1f"
+            uniqueId="fe6de019" isInstrument="0" fileTime="19075601049" infoUpdateTime="19075621907"
             numInputs="2" numOutputs="2" isShell="0" hasARAExtension="0"
             uid="e9582ec3"/>
     <STATE>191.VMjLgXK....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9XCLt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9..</STATE>

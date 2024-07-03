@@ -17,8 +17,8 @@ SimpleEQAudioProcessorEditor::SimpleEQAudioProcessorEditor (SimpleEQAudioProcess
     peakQualitySlideraAttachment(audioProcessor.apvts, "Peak Quality", peakQualitySlider),
     lowCutFreqSlideraAttachment(audioProcessor.apvts, "LowCut Freq", lowCutFreqSlider),
     highCutFreqSlideraAttachment(audioProcessor.apvts, "HighCut Freq", highCutFreqSlider),
-    lowCutSlopeSlideraAttachment(audioProcessor.apvts, "lowCut Slope", lowCutSlopeSlider),
-    highCutSlopeSlideraAttachment(audioProcessor.apvts, "highCut Slope", highCutSlopeSlider)
+    lowCutSlopeSlideraAttachment(audioProcessor.apvts, "LowCut Slope", lowCutSlopeSlider),
+    highCutSlopeSlideraAttachment(audioProcessor.apvts, "HighCut Slope", highCutSlopeSlider)
 {
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
@@ -27,11 +27,22 @@ SimpleEQAudioProcessorEditor::SimpleEQAudioProcessorEditor (SimpleEQAudioProcess
         addAndMakeVisible(comp);
     }
 
+    const auto& params = audioProcessor.getParameters();
+    for (auto param : params) {
+        param->addListener(this);
+    }
+
+    startTimerHz(60);
+
     setSize (600, 400);
 }
 
 SimpleEQAudioProcessorEditor::~SimpleEQAudioProcessorEditor()
 {
+    const auto& params = audioProcessor.getParameters();
+    for (auto param : params) {
+        param->removeListener(this);
+    }
 }
 
 //==============================================================================
@@ -135,8 +146,13 @@ void SimpleEQAudioProcessorEditor::parameterValueChanged(int parameterIndex, flo
 
 void SimpleEQAudioProcessorEditor::timerCallback() {
     if (parametersChanged.compareAndSetBool(false, true)) {
+        DBG("params changed");
         //update monoChain
+        auto chainSettings = getChainSettings(audioProcessor.apvts);
+        auto peakCoefficients = makePeakFilter(chainSettings, audioProcessor.getSampleRate());
+        updateCoefficients(monoChain.get<ChainPositions::Peak>().coefficients, peakCoefficients);
         //signal a repaint
+        repaint();
     }
 }
 
